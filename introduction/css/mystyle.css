@@ -1,14 +1,29 @@
 body {
-  background-color: lightblue;
+  background-color: #cbe8ff;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 h1 {
-  color: navy;
-  text-align: center; 
+  color: #0d2b61;
+  text-align: center;
+  padding: 20px 0;
 }
 
 p {
-  margin-left: 20px;
+  width: 80%;
+  max-width: 700px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   line-height: 1.6;
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
 }
