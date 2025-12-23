@@ -1,173 +1,76 @@
-/* ===== General Reset ===== */
 * {
   box-sizing: border-box;
 }
 
 body {
   font-family: "Lucida Sans", sans-serif;
-  font-size: 17px;
   margin: 0;
   padding: 0;
   line-height: 1.5;
+  background-color: #f4f4f4;
 }
 
-/* ===== Personal Profile Styles ===== */
-.profile-container {
-  max-width: 800px; /* limits width on large screens */
-  margin: 0 auto;   /* center on page */
-  padding: 20px;
-  background-color: #f9f9f9; /* light background */
-  border: 1px solid #ddd;
-  border-radius: 8px;
-}
-
-.profile-container h1 {
-  font-size: 36px;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.profile-content strong {
-  color: #333;
-}
-
-.profile-content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 10px;
-}
-
-/* Small screen adjustments */
-@media (max-width: 600px) {
-  .profile-container {
-    padding: 10px;
-  }
-
-  .profile-container h1 {
-    font-size: 28px;
-  }
-}
-
-/* ===== Grid Container (Chania) ===== */
-.grid-container {
+.profile-grid {
   display: grid;
   grid-template-areas:
     "header"
-    "menu"
-    "main"
-    "facts"
+    "about"
+    "education"
+    "hobbies"
+    "goals"
+    "gallery"
     "footer";
-  gap: 10px;
-  padding: 10px;
-  background-color: white;
+  gap: 15px;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
 }
 
-/* Header */
 .header {
   grid-area: header;
+  text-align: center;
   background-color: purple;
   color: #fff;
-  text-align: center;
   padding: 15px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 40px;
+.about { grid-area: about; background-color: #e3f2fd; padding: 10px; }
+.education { grid-area: education; background-color: #fff3e0; padding: 10px; }
+.hobbies { grid-area: hobbies; background-color: #f3e5f5; padding: 10px; }
+.goals { grid-area: goals; background-color: #e8f5e9; padding: 10px; }
+.gallery { grid-area: gallery; background-color: #fffde7; padding: 10px; text-align: center; }
+.footer { grid-area: footer; background-color: #0099cc; color: #fff; text-align: center; padding: 10px; }
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* Menu */
-.menu {
-  grid-area: menu;
-  background-color: #33b5e5;
-  padding: 10px;
-  color: white;
-}
+.profile-grid h1 { margin: 0; font-size: 36px; }
+.profile-grid h2 { margin: 0 0 8px 0; }
 
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #fff;
-  cursor: pointer;
-}
-
-.menu li:hover {
-  background-color: #0099cc;
-}
-
-/* Content */
-.content {
-  grid-area: main;
-  background-color: #f0f0f0;
-  padding: 10px;
-}
-
-.content h1 {
-  font-size: 30px;
-  margin-bottom: 7px;
-}
-
-.content p {
-  margin-bottom: 7px;
-}
-
-/* Facts */
-.facts {
-  grid-area: facts;
-  border: 1px solid #0099cc;
-  background-color: beige;
-  padding: 10px;
-}
-
-.facts h2 {
-  font-size: 20px;
-}
-
-.facts li {
-  margin-bottom: 5px;
-}
-
-/* Footer */
-.footer {
-  grid-area: footer;
-  background-color: #0099cc;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-/* ===== Responsive Layout ===== */
 @media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 4fr 1fr; /* menu | content | facts */
+  .profile-grid {
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
-      "menu content facts"
-      "footer footer footer";
-  }
-
-  .header {
-    grid-column: 1 / -1;
-  }
-
-  .footer {
-    grid-column: 1 / -1;
+      "header header"
+      "about education"
+      "hobbies goals"
+      "gallery gallery"
+      "footer footer";
   }
 }
 
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr 4fr 1fr;
+@media (min-width: 900px) {
+  .profile-grid {
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "header header header"
-      "menu content facts"
+      "about education hobbies"
+      "goals gallery gallery"
       "footer footer footer";
   }
 }
