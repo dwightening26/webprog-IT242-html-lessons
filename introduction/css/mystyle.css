@@ -1,7 +1,13 @@
 .container {
-  background-color: lightblue;
-  padding: 20px;
   display: flex;
   flex-wrap: wrap;
+  background-color: lightblue;
+  padding: 10px;
   gap: 10px;
+}
+
+.container div {
+  background-color: white;
+  border: 1px solid black;
+  padding: 10px;
 }
