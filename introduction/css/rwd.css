@@ -10,15 +10,11 @@ body {
   background-color: #f4f4f4;
 }
 
-.profile-grid {
+.grid-container {
   display: grid;
   grid-template-areas:
     "header"
-    "about"
-    "education"
-    "hobbies"
-    "goals"
-    "gallery"
+    "content"
     "footer";
   gap: 15px;
   max-width: 900px;
@@ -36,41 +32,43 @@ body {
   padding: 15px;
 }
 
-.about { grid-area: about; background-color: #e3f2fd; padding: 10px; }
-.education { grid-area: education; background-color: #fff3e0; padding: 10px; }
-.hobbies { grid-area: hobbies; background-color: #f3e5f5; padding: 10px; }
-.goals { grid-area: goals; background-color: #e8f5e9; padding: 10px; }
-.gallery { grid-area: gallery; background-color: #fffde7; padding: 10px; text-align: center; }
-.footer { grid-area: footer; background-color: #0099cc; color: #fff; text-align: center; padding: 10px; }
-
-.gallery img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
+.content {
+  grid-area: content;
+  background-color: #f9f9f9;
+  padding: 15px;
 }
 
-.profile-grid h1 { margin: 0; font-size: 36px; }
-.profile-grid h2 { margin: 0 0 8px 0; }
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #0099cc;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+}
 
 @media (min-width: 600px) {
-  .profile-grid {
+  .grid-container {
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "header header"
-      "about education"
-      "hobbies goals"
-      "gallery gallery"
+      "content content"
       "footer footer";
   }
 }
 
 @media (min-width: 900px) {
-  .profile-grid {
+  .grid-container {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "header header header"
-      "about education hobbies"
-      "goals gallery gallery"
+      "content content content"
       "footer footer footer";
   }
 }
