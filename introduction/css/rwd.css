@@ -1,3 +1,4 @@
+/* ===== General Reset ===== */
 * {
   box-sizing: border-box;
 }
@@ -7,8 +8,48 @@ body {
   font-size: 17px;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
+/* ===== Personal Profile Styles ===== */
+.profile-container {
+  max-width: 800px; /* limits width on large screens */
+  margin: 0 auto;   /* center on page */
+  padding: 20px;
+  background-color: #f9f9f9; /* light background */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.profile-container h1 {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.profile-content strong {
+  color: #333;
+}
+
+.profile-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Small screen adjustments */
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 10px;
+  }
+
+  .profile-container h1 {
+    font-size: 28px;
+  }
+}
+
+/* ===== Grid Container (Chania) ===== */
 .grid-container {
   display: grid;
   grid-template-areas:
@@ -18,10 +59,11 @@ body {
     "facts"
     "footer";
   gap: 10px;
-  background-color: white;
   padding: 10px;
+  background-color: white;
 }
 
+/* Header */
 .header {
   grid-area: header;
   background-color: purple;
@@ -35,6 +77,7 @@ body {
   font-size: 40px;
 }
 
+/* Menu */
 .menu {
   grid-area: menu;
   background-color: #33b5e5;
@@ -60,6 +103,7 @@ body {
   background-color: #0099cc;
 }
 
+/* Content */
 .content {
   grid-area: main;
   background-color: #f0f0f0;
@@ -75,6 +119,7 @@ body {
   margin-bottom: 7px;
 }
 
+/* Facts */
 .facts {
   grid-area: facts;
   border: 1px solid #0099cc;
@@ -90,6 +135,7 @@ body {
   margin-bottom: 5px;
 }
 
+/* Footer */
 .footer {
   grid-area: footer;
   background-color: #0099cc;
@@ -98,11 +144,13 @@ body {
   padding: 10px;
 }
 
+/* ===== Responsive Layout ===== */
 @media (min-width: 600px) {
   .grid-container {
-    grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "menu content facts"
-                         "footer footer footer";
+    grid-template-columns: 1fr 4fr 1fr; /* menu | content | facts */
+    grid-template-areas:
+      "menu content facts"
+      "footer footer footer";
   }
 
   .header {
@@ -117,8 +165,9 @@ body {
 @media (min-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr 4fr 1fr;
-    grid-template-areas: "header header header"
-                         "menu content facts"
-                         "footer footer footer";
+    grid-template-areas:
+      "header header header"
+      "menu content facts"
+      "footer footer footer";
   }
 }
