@@ -7,118 +7,42 @@ body {
   font-size: 17px;
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    "header"
-    "menu"
-    "main"
-    "facts"
-    "footer";
-  gap: 10px;
-  background-color: white;
-  padding: 10px;
+.profile-container {
+  max-width: 800px; 
+  margin: 0 auto;   
+  padding: 20px;
+  background-color: #f9f9f9; 
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-.header {
-  grid-area: header;
-  background-color: purple;
-  color: #fff;
+.profile-container h1 {
+  font-size: 36px;
   text-align: center;
-  padding: 15px;
+  margin-bottom: 20px;
 }
 
-.header h1 {
-  margin: 0;
-  font-size: 40px;
+.profile-content strong {
+  color: #333;
 }
 
-.menu {
-  grid-area: menu;
-  background-color: #33b5e5;
-  padding: 10px;
-  color: white;
+.profile-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-top: 10px;
 }
 
-.menu ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
 
-.menu li {
-  padding: 8px;
-  margin-bottom: 7px;
-  background-color: #33b5e5;
-  color: #fff;
-  cursor: pointer;
-}
-
-.menu li:hover {
-  background-color: #0099cc;
-}
-
-.content {
-  grid-area: main;
-  background-color: #f0f0f0; 
-  padding: 10px;
-}
-
-.content h1 {
-  font-size: 30px;
-  margin-bottom: 7px;
-}
-
-.content p {
-  margin-bottom: 7px;
-}
-
-.facts {
-  grid-area: facts;
-  border: 1px solid #0099cc;
-  background-color: beige;
-  padding: 10px;
-}
-
-.facts h2 {
-  font-size: 20px;
-}
-
-.facts li {
-  margin-bottom: 5px;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #0099cc;
-  color: #fff;
-  text-align: center;
-  padding: 10px;
-}
-
-@media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 4fr 1fr; 
-    grid-template-areas: "menu content facts"
-                         "footer footer footer";
+@media (max-width: 600px) {
+  .profile-container {
+    padding: 10px;
   }
 
-  .header {
-    grid-column: 1 / -1;
-  }
-
-  .footer {
-    grid-column: 1 / -1;
-  }
-}
-
-@media (min-width: 768px) {
-  .grid-container {
-    grid-template-columns: 1fr 4fr 1fr; 
-    grid-template-areas: "header header header"
-                         "menu content facts"
-                         "footer footer footer";
+  .profile-container h1 {
+    font-size: 28px;
   }
 }
