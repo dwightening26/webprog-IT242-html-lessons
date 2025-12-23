@@ -1,74 +1,103 @@
 * {
   box-sizing: border-box;
 }
-
+ 
 body {
   font-family: "Lucida Sans", sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.5;
-  background-color: #f4f4f4;
+  font-size: 17px;
 }
-
+ 
 .grid-container {
   display: grid;
   grid-template-areas:
-    "header"
-    "content"
-    "footer";
-  gap: 15px;
-  max-width: 900px;
-  margin: 20px auto;
-  padding: 15px;
-  background-color: #fff;
-  border-radius: 8px;
+    'header'
+    'menu'
+    'main'
+    'facts'
+    'footer';
+  background-color: white;
+  gap: 10px;  
 }
-
+ 
 .header {
   grid-area: header;
-  text-align: center;
   background-color: purple;
-  color: #fff;
-  padding: 15px;
+  text-align: center;
+  color: #ffffff;
 }
-
+ 
+.header > h1 {
+  font-size: 40px;
+}
+ 
+.menu {
+  grid-area: menu;
+  }
+ 
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: #33b5e5;
+  color: #ffffff;
+}
+ 
+.menu li:hover {
+  background-color: #0099cc;
+}
+ 
 .content {
-  grid-area: content;
-  background-color: #f9f9f9;
-  padding: 15px;
+  grid-area: main;
 }
-
-.content img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-top: 10px;
+ 
+.content > h1 {
+  font-size: 30px;
+  margin-bottom: 7px;
 }
-
+ 
+.content > p {
+  margin-bottom: 7px;
+}
+ 
+.facts {
+  grid-area: facts;
+  border: 1px solid #0099cc;
+  background-color: beige;
+  padding: 10px;
+}
+ 
+.facts > h2 {
+  font-size: 20px;
+}
+ 
+.facts li {
+  margin-bottom: 5px;
+}
+ 
 .footer {
   grid-area: footer;
   background-color: #0099cc;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
-  padding: 10px;
 }
-
+ 
 @media (min-width: 600px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas:
-      "header header"
-      "content content"
-      "footer footer";
-  }
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 3 / span 6;}
+  .footer {grid-area: 4 / span 6;}
 }
-
-@media (min-width: 900px) {
-  .grid-container {
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas:
-      "header header header"
-      "content content content"
-      "footer footer footer";
-  }
+ 
+@media (min-width: 768px) {
+  .header {grid-area: 1 / span 6;}
+  .menu {grid-area: 2 / span 1;}
+  .content {grid-area: 2 / span 4;}
+  .facts {grid-area: 2 / span 1;}
+  .footer {grid-area: 3 / span 6;}
 }
