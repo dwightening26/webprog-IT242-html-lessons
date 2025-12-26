@@ -8,44 +8,56 @@
 </head>
 <body>
 
-<h1>Personal Profile Web Page</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="#">Dwight's Profile</a>
+  </div>
+</nav>
 
-<p>
-  <strong>About Me</strong><br>
-  Name: Dwight Joseph D. Fernandez<br><br>
+<div class="container mt-5">
 
-  <strong>Education / Achievements:</strong><br>
-  Señior High School: Informatics College Alabang<br>
-  College: Asia Pacific College<br>
-  Course: BSIT<br>
-  IT Experience: Python and UI/UX<br><br>
+  <div class="row mb-5">
+    <div class="col-md-8">
+      <h2>About Me</h2>
+      <p>Name: Dwight Joseph D. Fernandez</p>
 
-  <strong>Hobbies & Interests:</strong><br>
-  Read Books, Gym, Gaming<br><br>
+      <h4>Education / Achievements</h4>
+      <p>
+        Senior High School: Informatics College Alabang<br>
+        College: Asia Pacific College<br>
+        Course: BSIT<br>
+        IT Experience: Python and UI/UX
+      </p>
 
-  <strong>Goals In Life / Dream:</strong><br>
-  Graduate College on time and Find A stable job related to my course.<br><br>
+      <h4>Hobbies & Interests</h4>
+      <p>Reading Books, Gym, Gaming</p>
 
-  <strong>Picture Gallery</strong><br>
-  <img src="https://media.tenor.com/5-0tu4-d5GoAAAAe/ishowspeed-speed-trying-not-to-laugh.png" width="500" height="600">
-</p>
+      <h4>Goals In Life / Dream</h4>
+      <p>Graduate college on time and find a stable job related to my course.</p>
+    </div>
 
-<div class="container-fluid mt-4">
-  <h1>Responsive Auto Layout Columns</h1>
-  <p>In Bootstrap 5, there is an easy way to create equal width columns: just use the <code>.col-md</code> class on a specified number of col elements. Bootstrap will recognize how many columns there are, and each column will get the same width.</p>
-  <p>If the screen size is <strong>less than 768px</strong>, the columns will stack vertically.</p>
+    <div class="col-md-4 text-center">
+      <h4>Picture Gallery</h4>
+      <img src="https://media.tenor.com/5-0tu4-d5GoAAAAe/ishowspeed-speed-trying-not-to-laugh.png" class="img-fluid rounded">
+    </div>
+  </div>
+
+  <h2 class="mb-3">Responsive Auto Layout Columns</h2>
+  <p>Bootstrap 5 allows equal-width responsive columns using the <code>.col-md</code> class.</p>
+  <p>If the screen size is less than 768px, the columns stack vertically.</p>
 
   <div class="row mb-2">
-    <div class="col-md bg-primary text-white py-2 px-3">1 of 2</div>
-    <div class="col-md bg-dark text-white py-2 px-3">2 of 2</div>
+    <div class="col-md bg-primary text-white py-2">1 of 2</div>
+    <div class="col-md bg-dark text-white py-2">2 of 2</div>
   </div>
 
   <div class="row">
-    <div class="col-md bg-primary text-white py-2 px-3">1 of 4</div>
-    <div class="col-md bg-dark text-white py-2 px-3">2 of 4</div>
-    <div class="col-md bg-primary text-white py-2 px-3">3 of 4</div>
-    <div class="col-md bg-dark text-white py-2 px-3">4 of 4</div>
+    <div class="col-md bg-primary text-white py-2">1 of 4</div>
+    <div class="col-md bg-dark text-white py-2">2 of 4</div>
+    <div class="col-md bg-primary text-white py-2">3 of 4</div>
+    <div class="col-md bg-dark text-white py-2">4 of 4</div>
   </div>
+
 </div>
 
 </body>
